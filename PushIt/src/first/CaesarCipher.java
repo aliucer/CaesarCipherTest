@@ -12,7 +12,7 @@ public class CaesarCipher {
 			char mychar = plainText2.charAt(i);
 			int place = ALPHABET.indexOf(mychar);
 			place = place + key;
-			place = place % 26;
+			place = place % ALPHABET.length();
 			char newChar = ALPHABET.charAt(place);
 			if(Character.isLowerCase(Character.valueOf(plainText.charAt(i)))) {
 				newChar = Character.toLowerCase(newChar);
